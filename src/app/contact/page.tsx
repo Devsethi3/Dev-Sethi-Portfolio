@@ -191,7 +191,7 @@ const ContactPage: FC = () => {
               />
             </Link>
             <Link
-              href="www.linkedin.com/in/dev-prasad-sethi-162789326"
+              href="https://linkedin.com/in/dev-prasad-sethi-162789326"
               target="_blank"
               className="flex items-center justify-between border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg p-4 rounded-lg group"
             >

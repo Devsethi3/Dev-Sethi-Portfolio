@@ -6,6 +6,7 @@ import { RoughNotation } from "react-rough-notation";
 import { FaStarOfLife } from "react-icons/fa";
 import ProjectItem from "./ProjectItem";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,7 @@ const Projects: React.FC = () => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const projectsContainerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -103,7 +105,7 @@ const Projects: React.FC = () => {
           },
         });
       });
-      
+
       // Stagger animation for project titles
       gsap.from(".project-title", {
         y: 50,
@@ -149,6 +151,7 @@ const Projects: React.FC = () => {
             resonates with your audience and grows your business.
           </p>
           <motion.button
+            onClick={() => router.push("/work")}
             ref={buttonRef}
             className="bg-[#E53E6D] rounded-lg mt-5 flex items-center lg:justify-start justify-center max-w-2xl lg:mx-0 mx-auto py-3 px-6 font-semibold shadow-lg"
             animate={{
@@ -186,4 +189,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-

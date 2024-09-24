@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const NavLogo = () => {
   return (
-    <div>
+    <Link href="/">
       <motion.div
         className="flex items-center gap-3"
         initial={{ opacity: 0, y: -20 }}
@@ -23,7 +24,7 @@ const NavLogo = () => {
           <span className="text-sm opacity-75 -mt-1">Developer & Designer</span>
         </div>
       </motion.div>
-    </div>
+    </Link>
   );
 };
 

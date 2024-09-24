@@ -20,7 +20,7 @@ const CallToAction = () => {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               Have a dream project?
             </h2>
-            <p className="mx-auto max-w-[700px] lg:text-2xl text-lg">
+            <p className="lg:mx-auto max-w-[700px] lg:text-2xl text-lg mx-4">
               Let&apos;s transform your vision into stunning reality. Reach out today
               and start the journey to a remarkable brand presence.
             </p>
@@ -37,7 +37,7 @@ const CallToAction = () => {
         <p>&copy; 2024 Dev Sethi. All rights reserved.</p>
         <div className="flex items-center gap-7">
           <Link
-            href="www.linkedin.com/in/dev-prasad-sethi-162789326"
+            href="https://linkedin.com/in/dev-prasad-sethi-162789326"
             target="_blank"
             className="transition-all hover:bg-opacity-90 hover:shadow-lg hover:scale-105 transform hover:-translate-y-1"
           >

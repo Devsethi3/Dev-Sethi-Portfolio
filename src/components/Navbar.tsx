@@ -14,6 +14,21 @@ import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import NavLogo from "./NavLogo";
 import { useRouter } from "next/navigation";
+import { IconType } from "react-icons";
+
+interface SocialLink {
+  icon: IconType;
+  href: string;
+}
+const socialLinks: SocialLink[] = [
+  {
+    icon: FaLinkedin,
+    href: "https://linkedin.com/in/dev-prasad-sethi-162789326",
+  },
+  { icon: BiLogoGmail, href: "mailto:work.devsethi@gmail.com" },
+  { icon: FaGithub, href: "https://github.com/Devsethi3" },
+  { icon: FaXTwitter, href: "https://twitter.com/DevSethi45" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -201,7 +216,7 @@ const Navbar = () => {
                 ))}
 
                 <motion.button
-                  onClick={() => router.push("/contact#contact-form")}
+                  onClick={() => router.push("/contact")}
                   className="bg-[#E53E6D] rounded-lg w-full mt-8 flex items-center justify-center py-3 px-4 font-semibold shadow-lg"
                   animate={{
                     boxShadow: [
@@ -209,6 +224,8 @@ const Navbar = () => {
                       "0px 0px 30px hsl(340deg 100% 70% / 0.3)",
                       "0px 0px 30px hsl(340deg 100% 70% / 0.3)",
                     ],
+                    opacity: 1,
+                    y: 0,
                   }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -226,22 +243,28 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
               >
-                {[FaLinkedin, BiLogoGmail, FaGithub, FaXTwitter].map(
-                  (Icon, index) => (
-                    <motion.div
-                      key={index}
-                      custom={index}
-                      variants={socialIconVariants}
-                      whileHover={{ scale: 1.1, color: "#E53E6D" }}
-                      whileTap={{ scale: 0.95 }}
+                {socialLinks.map((link, index) => (
+                  <motion.div
+                    key={index}
+                    custom={index}
+                    variants={socialIconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover={{ scale: 1.1, color: "#E53E6D" }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Icon
+                      <link.icon
                         size={40}
                         className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
                       />
-                    </motion.div>
-                  )
-                )}
+                    </Link>
+                  </motion.div>
+                ))}
               </motion.div>
             </motion.div>
           )}

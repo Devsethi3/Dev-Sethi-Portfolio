@@ -9,7 +9,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { projects } from "@/lib/projectData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 import FeaturedPackage from "@/components/FeaturedPackage";
 import Link from "next/link";
 
@@ -33,8 +33,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [mainImage, setMainImage] = useState<string>(project.images[0]);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (cardRef.current) {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Set up the animation for the card
       gsap.from(cardRef.current, {
         y: 50,
         opacity: 0,
@@ -46,7 +47,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           toggleActions: "play none none reverse",
         },
       });
-    }
+    }, cardRef);
+
+    return () => ctx.revert(); // Cleanup on unmount
   }, []);
 
   return (
@@ -209,3 +212,6 @@ const ProjectsPage: React.FC = () => {
 };
 
 export default ProjectsPage;
+
+// Remain all the styles and ui same
+// Optimize the code for scroll animation of gsap, it perfectly works in developement but after deployement user have refresh the page to see the elements and scroll animations in this Projects page component

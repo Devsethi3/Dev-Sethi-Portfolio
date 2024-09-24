@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { RoughNotation } from "react-rough-notation";
@@ -11,7 +11,7 @@ import { ReactTyped } from "react-typed";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,50 +25,56 @@ const AboutPage: React.FC = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const expertiseRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      // Header animation
-      gsap.from(headerRef.current, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: "top bottom-=100",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-      });
+  useEffect(() => {
+    // Ensure the DOM is fully loaded
+    if (typeof window !== "undefined") {
+      // Create a context for GSAP animations
+      const ctx = gsap.context(() => {
+        // Header animation
+        gsap.from(headerRef.current, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: "top bottom-=100",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        });
 
-      // About Me section animation
-      gsap.from(aboutMeRef.current, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutMeRef.current,
-          start: "top bottom-=100",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-      });
+        // About Me section animation
+        gsap.from(aboutMeRef.current, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: aboutMeRef.current,
+            start: "top bottom-=100",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        });
 
-      gsap.from(expertiseRef.current?.children || [], {
-        opacity: 0,
-        y: 50,
-        stagger: 0.2,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: expertiseRef.current,
-          start: "top bottom-=100",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-      });
-    }, aboutRef);
+        // Expertise section animation
+        gsap.from(expertiseRef.current?.children || [], {
+          opacity: 0,
+          y: 50,
+          stagger: 0.2,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: expertiseRef.current,
+            start: "top bottom-=100",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        });
+      }, aboutRef); // Scope the context to the aboutRef
 
-    return () => ctx.revert();
-  }, []);
+      // Cleanup function
+      return () => ctx.revert();
+    }
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div
@@ -161,7 +167,7 @@ const AboutPage: React.FC = () => {
                 />
               </Link>
               <Link
-                href="www.linkedin.com/in/dev-prasad-sethi-162789326"
+                href="https://linkedin.com/in/dev-prasad-sethi-162789326"
                 target="_blank"
               >
                 <FaLinkedin
