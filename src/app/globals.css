@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background-color: #030102;
+  color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+*::selection {
+  background: #e53e6d;
+  color: #fff;
+}
+
+/* Example of usage for specific styles */
+.container {
+  max-width: 1350px;
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
+
+.animate-slide {
+  animation: 15s slide linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media screen and (max-width: 1024px) {
+  .navbar {
+    max-width: 1350px;
+    margin-inline: auto;
+    padding-inline: 0.75rem;
   }
 }
