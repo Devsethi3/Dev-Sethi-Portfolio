@@ -91,8 +91,8 @@ const Projects: React.FC = () => {
       });
 
       // Animate project items
-      const projectItems = gsap.utils.toArray(".project-item");
-      projectItems.forEach((item: any) => {
+      const projectItems = gsap.utils.toArray<HTMLElement>(".project-item"); // Use type assertion
+      projectItems.forEach((item) => {
         gsap.from(item, {
           y: 100,
           opacity: 0,
@@ -103,7 +103,7 @@ const Projects: React.FC = () => {
           },
         });
       });
-
+      
       // Stagger animation for project titles
       gsap.from(".project-title", {
         y: 50,
@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
             ref={descriptionRef}
             className="text-base lg:text-left text-center md:text-lg lg:text-xl max-w-xl lg:my-8 my-5"
           >
-            Our teams are purpose-built around our client's unique needs at
+            Our teams are purpose-built around our client&apos;s unique needs at
             every stage of the engagement. Our goal is to create work that
             resonates with your audience and grows your business.
           </p>
@@ -186,3 +186,4 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
+

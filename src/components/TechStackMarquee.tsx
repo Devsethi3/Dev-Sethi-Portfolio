@@ -50,7 +50,13 @@ const techStack = [
   { icon: TbBrandRedux, name: "Redux" },
 ];
 
-const TechStackCard = ({ icon: Icon, name }: { icon: any; name: string }) => {
+const TechStackCard = ({
+  icon: Icon,
+  name,
+}: {
+  icon: React.ElementType;
+  name: string;
+}) => {
   return (
     <figure
       className={cn(

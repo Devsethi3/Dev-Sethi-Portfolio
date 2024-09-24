@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import ProjectsButton from "./ProjectsButton";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 interface ProjectItemProps {
@@ -22,7 +21,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   liveLink,
   target,
 }) => {
-  const router = useRouter();
 
   return (
     <div className="project-item">

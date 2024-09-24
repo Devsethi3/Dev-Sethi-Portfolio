@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactLenis, useLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 
 import HeroSection from "@/components/HeroSection";
 import TextSlider from "@/components/TextSlider";

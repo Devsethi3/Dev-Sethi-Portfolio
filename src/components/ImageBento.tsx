@@ -72,7 +72,7 @@ const ImageBento: React.FC = () => {
             Beyond the Code: My Coding Journey{" "}
           </h2>
           <p className="text-sm sm:text-base mb-6 sm:mb-8 text-gray-200 leading-relaxed">
-            Throughout my career, I've tackled complex web development
+            Throughout my career, I&apos;ve tackled complex web development
             challenges with a creative and solution-oriented mindset. My
             portfolio features projects that showcase my ability to transform
             client visions into tangible results.

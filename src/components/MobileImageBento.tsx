@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 const MobileImageBento: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,11 +30,11 @@ const MobileImageBento: React.FC = () => {
     "/Synkron.png",
   ];
 
-  // ImageRow component for the horizontal sliding images
-  const ImageRow: React.FC<{ xOffset: any; images: string[] }> = ({
-    xOffset,
-    images,
-  }) => (
+  // Update type to MotionValue<number>
+  const ImageRow: React.FC<{
+    xOffset: MotionValue<number>;
+    images: string[];
+  }> = ({ xOffset, images }) => (
     <motion.div className="flex gap-4" style={{ x: xOffset }}>
       {images.map((src, index) => (
         <Image

@@ -78,7 +78,7 @@ const Navbar = () => {
   // Enhanced animation variants for individual menu items
   const menuItemVariants = {
     closed: { opacity: 0, x: 50 },
-    open: (i: any) => ({
+    open: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
@@ -92,7 +92,7 @@ const Navbar = () => {
   // New animation variant for social media icons
   const socialIconVariants = {
     closed: { opacity: 0, y: 20 },
-    open: (i: any) => ({
+    open: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -213,7 +213,6 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
-                  // @ts-ignore
                   transition={{ delay: 0.5, duration: 0.5 }}
                 >
                   Ask a Question
