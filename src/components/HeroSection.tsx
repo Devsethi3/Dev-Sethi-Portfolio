@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background  */}
       <motion.div
         className="absolute inset-0 bg-[url('/portfolio-bg.jpg')] bg-cover bg-center opacity-70"
         initial={{ scale: 1.3 }}
