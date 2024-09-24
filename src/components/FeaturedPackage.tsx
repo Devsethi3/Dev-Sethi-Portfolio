@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
+import React, { useLayoutEffect, useRef, useState } from "react";
+// import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -19,8 +19,8 @@ const FeaturedPackage: React.FC = () => {
   const countRef = useRef<HTMLDivElement>(null);
   const [showAnnotations, setShowAnnotations] = useState(false);
 
-  useGSAP(() => {
-    if (sectionRef.current) {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -38,57 +38,47 @@ const FeaturedPackage: React.FC = () => {
         duration: 0.8,
         ease: "power3.out",
       })
-        .from(
-          imageRef.current,
-          {
-            opacity: 0,
-            x: -50,
-            duration: 0.6,
-            ease: "power3.out",
-          },
-          "-=0.4"
-        )
-        .from(
-          contentRef.current,
-          {
-            opacity: 0,
-            x: 50,
-            duration: 0.6,
-            ease: "power3.out",
-          },
-          "-=0.6"
-        )
-        .from(
-          titleRef.current,
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.4,
-            ease: "power3.out",
-          },
-          "-=0.3"
-        )
-        .from(
-          descriptionRef.current,
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.4,
-            ease: "power3.out",
-          },
-          "-=0.2"
-        )
-        .from(
-          countRef.current,
-          {
-            opacity: 0,
-            scale: 0.8,
-            duration: 0.4,
-            ease: "back.out(1.7)",
-          },
-          "-=0.2"
-        );
-    }
+        .from(imageRef.current, {
+          opacity: 0,
+          x: -50,
+          duration: 0.6,
+          ease: "power3.out",
+        }, "-=0.4")
+        .from(contentRef.current, {
+          opacity: 0,
+          x: 50,
+          duration: 0.6,
+          ease: "power3.out",
+        }, "-=0.6")
+        .from(titleRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          ease: "power3.out",
+        }, "-=0.3")
+        .from(descriptionRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.4,
+          ease: "power3.out",
+        }, "-=0.2")
+        .from(countRef.current, {
+          opacity: 0,
+          scale: 0.8,
+          duration: 0.4,
+          ease: "back.out(1.7)",
+        }, "-=0.2");
+    }, sectionRef);
+
+    // Refresh ScrollTrigger after a short delay to ensure proper initialization
+    const refreshTimeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => {
+      ctx.revert(); // Clean up GSAP animations
+      clearTimeout(refreshTimeout);
+    };
   }, []);
 
   return (
