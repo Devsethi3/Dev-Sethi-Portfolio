@@ -178,7 +178,7 @@ const Navbar = () => {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="fixed inset-y-0 right-0 w-full bg-black text-white bg-opacity-90 backdrop-blur-lg p-6 z-30"
+              className="fixed inset-y-0 right-0 w-full bg-[#000000e1] text-white bg-opacity-90 backdrop-blur-lg p-6 z-30"
             >
               {/* Close Button */}
               <motion.button

@@ -6,7 +6,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      "Novis integrates the AI for enhanced functionality and manage tasks efficiently",
     images: [
       "/novis-showcase.png",
       "/novis-showcase-3.png",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      "Web application to facilitate easy form creation drag-and-drop form building",
     images: [
       "/form-showcase-3.jpeg",
       "/form-showcase-2.png",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      " SaaS platform to provide collaborative, and private workspace for teams and individuals.",
     images: [
       "/Synkron.png",
       "/synkron-showcase.png",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      "Web app to facilitate real-time collaboration on canvas among team members",
     images: [
       "/sketchy-showcase.png",
       "/sketchy-showcase-2.png",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      "ArtiGen offers users a suite of AI-driven content generation templates and chatbot.",
     images: [
       "/artigen-showcase.png",
       "/artigen-showcase-1.png",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     year: "2024",
     category: "Portfolio",
     description:
-      "A showcase of my development projects and skills. Lorem ipsum dolor sit amet.",
+      "Messaging web application designed to provide users with real-time chat capabilities.",
     images: [
       "/nexchat-showcase.png",
       "/nexchat-showcase-1.png",

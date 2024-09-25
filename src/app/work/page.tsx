@@ -195,7 +195,7 @@ const ProjectsPage: React.FC = () => {
                 GitHub
               </Link>
               <Link
-                href="www.linkedin.com/in/dev-prasad-sethi-162789326"
+                href="https://linkedin.com/in/dev-prasad-sethi-162789326"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500 transition-all"

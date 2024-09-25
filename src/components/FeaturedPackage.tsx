@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,66 +19,88 @@ const FeaturedPackage: React.FC = () => {
   const countRef = useRef<HTMLDivElement>(null);
   const [showAnnotations, setShowAnnotations] = useState(false);
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom-=100",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-          onEnter: () => setShowAnnotations(true),
-          onLeaveBack: () => setShowAnnotations(false),
-        },
-      });
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom-=100",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+            onEnter: () => setShowAnnotations(true),
+            onLeaveBack: () => setShowAnnotations(false),
+          },
+        });
 
-      tl.from(sectionRef.current, {
-        opacity: 0,
-        y: 100,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-        .from(imageRef.current, {
+        tl.from(sectionRef.current, {
           opacity: 0,
-          x: -50,
-          duration: 0.6,
+          y: 100,
+          duration: 0.8,
           ease: "power3.out",
-        }, "-=0.4")
-        .from(contentRef.current, {
-          opacity: 0,
-          x: 50,
-          duration: 0.6,
-          ease: "power3.out",
-        }, "-=0.6")
-        .from(titleRef.current, {
-          opacity: 0,
-          y: 20,
-          duration: 0.4,
-          ease: "power3.out",
-        }, "-=0.3")
-        .from(descriptionRef.current, {
-          opacity: 0,
-          y: 20,
-          duration: 0.4,
-          ease: "power3.out",
-        }, "-=0.2")
-        .from(countRef.current, {
-          opacity: 0,
-          scale: 0.8,
-          duration: 0.4,
-          ease: "back.out(1.7)",
-        }, "-=0.2");
-    }, sectionRef);
+        })
+          .from(
+            imageRef.current,
+            {
+              opacity: 0,
+              x: -50,
+              duration: 0.6,
+              ease: "power3.out",
+            },
+            "-=0.4"
+          )
+          .from(
+            contentRef.current,
+            {
+              opacity: 0,
+              x: 50,
+              duration: 0.6,
+              ease: "power3.out",
+            },
+            "-=0.6"
+          )
+          .from(
+            titleRef.current,
+            {
+              opacity: 0,
+              y: 20,
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "-=0.3"
+          )
+          .from(
+            descriptionRef.current,
+            {
+              opacity: 0,
+              y: 20,
+              duration: 0.4,
+              ease: "power3.out",
+            },
+            "-=0.2"
+          )
+          .from(
+            countRef.current,
+            {
+              opacity: 0,
+              scale: 0.8,
+              duration: 0.4,
+              ease: "back.out(1.7)",
+            },
+            "-=0.2"
+          );
+      }, sectionRef);
 
-    // Refresh ScrollTrigger after a short delay to ensure proper initialization
-    const refreshTimeout = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
+      // Refresh ScrollTrigger after a short delay to ensure proper initialization
+      const refreshTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
 
-    return () => {
-      ctx.revert(); // Clean up GSAP animations
-      clearTimeout(refreshTimeout);
-    };
+      return () => {
+        ctx.revert(); // Clean up GSAP animations
+        clearTimeout(refreshTimeout);
+      };
+    }
   }, []);
 
   return (
@@ -117,7 +139,7 @@ const FeaturedPackage: React.FC = () => {
             <RoughNotationGroup show={showAnnotations}>
               <RoughNotation
                 type="highlight"
-                color="#006fab"
+                color="#002eab"
                 animationDelay={300}
                 animationDuration={800}
               >
@@ -126,7 +148,7 @@ const FeaturedPackage: React.FC = () => {
               ,{" "}
               <RoughNotation
                 type="highlight"
-                color="#008031"
+                color="#027135"
                 animationDelay={600}
                 animationDuration={800}
               >
@@ -156,9 +178,9 @@ const FeaturedPackage: React.FC = () => {
             </Link>
 
             <div ref={countRef} className="flex items-center gap-2">
-              <span className="text-2xl text-white">Package Size:</span>
-              <span className="text-2xl font-bold text-white">
-                <CountPlus end={15} suffix="kb" duration={5} />
+              <span className="text-xl text-white">Package Size:</span>
+              <span className="text-xl font-bold text-white">
+                <CountPlus end={12} suffix="kb" duration={5} />
               </span>
             </div>
           </div>
