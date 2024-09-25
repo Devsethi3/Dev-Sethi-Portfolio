@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div
       ref={cardRef}
-      className="border border-[#ffffff10] bg-[#ffffff08] backdrop-blur-lg rounded-xl overflow-hidden p-6"
+      className="border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg rounded-xl overflow-hidden p-6"
     >
       <div className="relative h-48 md:h-64 lg:h-72">
         <Image
@@ -66,10 +66,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
       </div>
       <div className="py-4 md:py-6 space-y-4">
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 text-white">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">
           {project.title}
         </h2>
-        <p className="text-gray-300 text-sm md:text-base lg:text-lg">
+        <p className="text-gray-200 text-sm md:text-base lg:text-lg">
           {project.description}
         </p>
         <div className="flex flex-wrap w-full items-center gap-3 mb-4">

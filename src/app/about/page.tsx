@@ -94,13 +94,13 @@ const AboutPage: React.FC = () => {
           className="absolute top-0 right-0 hidden lg:block"
           alt="code"
         />
-        <div className="flex items-center justify-center lg:justify-start gap-4 border px-6 py-2.5 rounded-lg lg:w-fit w-full border-[#ffffff06] bg-[#ffffff08]">
+        <div className="flex items-center justify-center lg:justify-start gap-4 border px-6 py-2.5 rounded-lg lg:w-fit w-full border-[#ffffff10] bg-[#ffffff14]">
           <Image
             src="/hello.svg"
             alt="hello"
             width={50}
             height={50}
-            className="border p-2 rounded-full border-[#ffffff06] bg-[#ffffff08]"
+            className="border p-2 rounded-full border-[#ffffff10] bg-[#ffffff14]"
           />
           <p className="text-xl text-center lg:text-left font-semibold">
             Hello, Explore My Portfolio
@@ -137,7 +137,7 @@ const AboutPage: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           I Specialize in <br className="md:hidden block" /> &nbsp;
-          <span className="border border-[#ffffff06] bg-[#ffffff08] text-[#E53E6D] py-2 px-4 rounded-lg inline-block">
+          <span className="border border-[#ffffff10] bg-[#ffffff14] text-[#E53E6D] py-2 px-4 rounded-lg inline-block">
             <ReactTyped
               strings={["Coding", "Designing", "Developing", "Templating"]}
               typeSpeed={100}
@@ -152,7 +152,7 @@ const AboutPage: React.FC = () => {
 
         <motion.div
           ref={aboutMeRef}
-          className="flex w-full border-[#ffffff06] bg-[#ffffff08] p-6 flex-col gap-6"
+          className="flex w-full border-[#ffffff10] bg-[#ffffff14] p-6 flex-col gap-6"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -163,7 +163,7 @@ const AboutPage: React.FC = () => {
               <Link href="https://twitter.com/DevSethi45" target="_blank">
                 <FaXTwitter
                   size={40}
-                  className="border p-2 opacity-70 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 lg:opacity-80 opacity-100 lg:hover:opacity-100 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
               </Link>
               <Link
@@ -172,13 +172,13 @@ const AboutPage: React.FC = () => {
               >
                 <FaLinkedin
                   size={40}
-                  className="border p-2 opacity-70 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 lg:opacity-80 opacity-100 lg:hover:opacity-100 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
               </Link>
               <Link href="https://github.com/Devsethi3" target="_blank">
                 <FaGithub
                   size={40}
-                  className="border p-2 opacity-70 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 lg:opacity-80 opacity-100 lg:hover:opacity-100 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
               </Link>
             </div>

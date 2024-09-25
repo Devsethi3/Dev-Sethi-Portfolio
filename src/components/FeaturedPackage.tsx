@@ -106,7 +106,7 @@ const FeaturedPackage: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="mt-20 p-5 md:p-12 border border-[#ffffff27] bg-[#ffffff08] rounded-3xl shadow-2xl overflow-hidden relative"
+      className="mt-20 p-5 md:p-12 border border-[#ffffff10] bg-[#ffffff14] rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <h2
         ref={titleRef}

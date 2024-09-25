@@ -122,7 +122,7 @@ const ContactPage: FC = () => {
         {/* Left Column - Profile Card */}
         <div className="flex flex-col gap-10">
           <motion.div
-            className="p-8 rounded-lg border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg shadow-lg flex flex-col justify-between space-y-8"
+            className="p-8 rounded-lg border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg shadow-lg flex flex-col justify-between space-y-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -156,12 +156,12 @@ const ContactPage: FC = () => {
             <Link
               href="https://github.com/Devsethi3"
               target="_blank"
-              className="flex items-center justify-between border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg p-4 rounded-lg group"
+              className="flex items-center justify-between border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg p-4 rounded-lg group"
             >
               <div className="flex items-center gap-4">
                 <FaGithub
                   size={40}
-                  className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
                 <span className="font-bold text-xl opacity-75 hover:opacity-100 transition-all group-hover:underline">
                   GitHub
@@ -174,12 +174,12 @@ const ContactPage: FC = () => {
             </Link>
             <Link
               href="mailto:work.devsethi@gmail.com"
-              className="flex items-center justify-between border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg p-4 rounded-lg group"
+              className="flex items-center justify-between border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg p-4 rounded-lg group"
             >
               <div className="flex items-center gap-4">
                 <BiLogoGmail
                   size={40}
-                  className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
                 <span className="font-bold text-xl opacity-75 hover:opacity-100 transition-all group-hover:underline">
                   G-Mail
@@ -193,12 +193,12 @@ const ContactPage: FC = () => {
             <Link
               href="https://linkedin.com/in/dev-prasad-sethi-162789326"
               target="_blank"
-              className="flex items-center justify-between border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg p-4 rounded-lg group"
+              className="flex items-center justify-between border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg p-4 rounded-lg group"
             >
               <div className="flex items-center gap-4">
                 <FaLinkedin
                   size={40}
-                  className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
                 <span className="font-bold text-xl opacity-75 hover:opacity-100 transition-all group-hover:underline">
                   Linkedin
@@ -212,12 +212,12 @@ const ContactPage: FC = () => {
             <Link
               href="https://twitter.com/DevSethi45"
               target="_blank"
-              className="flex items-center justify-between border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg p-4 rounded-lg group"
+              className="flex items-center justify-between border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg p-4 rounded-lg group"
             >
               <div className="flex items-center gap-4">
                 <FaXTwitter
                   size={40}
-                  className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+                  className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
                 />
                 <span className="font-bold text-xl opacity-75 hover:opacity-100 transition-all group-hover:underline">
                   Twitter
@@ -233,7 +233,7 @@ const ContactPage: FC = () => {
         {/* Right Column - Contact Form */}
         <motion.div
           id="contact-form"
-          className="p-8 mb-10 lg:mb-0 rounded-lg border border-[#ffffff06] bg-[#ffffff08] backdrop-blur-lg shadow-lg space-y-6"
+          className="p-8 mb-10 lg:mb-0 rounded-lg border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg shadow-lg space-y-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
@@ -253,7 +253,7 @@ const ContactPage: FC = () => {
                 type="text"
                 id="first-name"
                 name="firstName"
-                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff06] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors"
+                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff10] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors"
                 placeholder="Enter your name"
               />
             </div>
@@ -268,7 +268,7 @@ const ContactPage: FC = () => {
                 type="email"
                 id="user_email"
                 name="user_email"
-                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff06] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors"
+                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff10] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors"
                 placeholder="Enter your email"
               />
             </div>
@@ -283,7 +283,7 @@ const ContactPage: FC = () => {
                 id="message"
                 name="user_message"
                 rows={4}
-                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff06] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors resize-none"
+                className="w-full p-3 bg-[#ffffff0a] rounded-lg border border-[#ffffff10] focus:outline-none focus:border-[#E53E6D] focus:ring-1 focus:ring-[#E53E6D] transition-colors resize-none"
                 placeholder="Enter your message"
               ></textarea>
             </div>

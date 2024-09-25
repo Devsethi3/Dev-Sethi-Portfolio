@@ -43,7 +43,7 @@ const CallToAction = () => {
           >
             <FaLinkedin
               size={40}
-              className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+              className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
             />
           </Link>
           <Link
@@ -52,7 +52,7 @@ const CallToAction = () => {
           >
             <BiLogoGmail
               size={40}
-              className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+              className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
             />
           </Link>
           <Link
@@ -62,7 +62,7 @@ const CallToAction = () => {
           >
             <FaGithub
               size={40}
-              className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+              className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
             />
           </Link>
           <Link
@@ -72,7 +72,7 @@ const CallToAction = () => {
           >
             <FaXTwitter
               size={40}
-              className="border p-2 rounded-lg border-[#ffffff06] bg-[#ffffff08]"
+              className="border p-2 rounded-lg border-[#ffffff10] bg-[#ffffff14]"
             />
           </Link>
         </div>
