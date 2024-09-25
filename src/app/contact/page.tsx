@@ -53,9 +53,14 @@ const ContactPage: FC = () => {
     setLoading(true);
 
     emailjs
-      .sendForm("service_b9d6ri8", "template_d7m2lpn", formRef.current, {
-        publicKey: "wjG0qEbYkoa3KZJSJ",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        }
+      )
       .then(
         () => {
           toast.success("Message Sent Succesfully!", {
@@ -113,8 +118,8 @@ const ContactPage: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          Ready to connect and collaborate, drop me a line and let&apos;s turn ideas
-          into reality!
+          Ready to connect and collaborate, drop me a line and let&apos;s turn
+          ideas into reality!
         </motion.p>
       </div>
 
@@ -143,7 +148,7 @@ const ContactPage: FC = () => {
                 <h2 className="lg:text-2xl text-xl font-semibold mt-2">
                   Dev Prasad Sethi
                 </h2>
-                <p className="text-sm">Designer & Developer</p>
+                <p className="text-sm">Developer & Designer</p>
               </div>
             </div>
           </motion.div>

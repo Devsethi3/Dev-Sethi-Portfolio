@@ -17,7 +17,7 @@ const MobileImageBento: React.FC = () => {
   const images1 = [
     "/light-theme.png",
     "/b1.svg",
-    "/Preview.png",
+    "/novis-showcase.png",
     "/demo-project.webp",
     "/showcase-grid-2.png",
   ];

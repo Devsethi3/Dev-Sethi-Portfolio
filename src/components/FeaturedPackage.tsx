@@ -135,7 +135,7 @@ const FeaturedPackage: React.FC = () => {
             className="text-lg md:text-xl text-white opacity-90 leading-relaxed"
           >
             A flexible and customizable React component for animated number
-            counting. Built with{" "}
+            counting. <br /> Built with{" "}
             <RoughNotationGroup show={showAnnotations}>
               <RoughNotation
                 type="highlight"

@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
           className="absolute top-0 right-0 hidden lg:block"
           alt="code"
         />
-        <div className="flex items-center justify-center lg:justify-start gap-4 border px-6 py-2.5 rounded-lg lg:w-fit w-full border-[#ffffff10] bg-[#ffffff14]">
+        <div className="flex items-center justify-center lg:justify-start lg:gap-4 gap-1 border px-6 py-2.5 rounded-lg lg:w-fit w-full border-[#ffffff10] bg-[#ffffff14]">
           <Image
             src="/hello.svg"
             alt="hello"
@@ -152,7 +152,7 @@ const AboutPage: React.FC = () => {
 
         <motion.div
           ref={aboutMeRef}
-          className="flex w-full border-[#ffffff10] bg-[#ffffff14] p-6 flex-col gap-6"
+          className="flex w-full border-[#ffffff10] bg-[#ffffff14] p-6 flex-col gap-6 rounded-lg"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
@@ -183,12 +183,21 @@ const AboutPage: React.FC = () => {
               </Link>
             </div>
           </div>
-          <p className="text-xl opacity-80">
-            A Full Stack Next.js Developer based in India, with a proven track
-            record of crafting high-performance, SEO-optimized web applications.
-            As a passionate innovator, I leverage Next.js&apos;s cutting-edge
-            capabilities to consistently deliver exceptional results that exceed
-            client expectations.
+          <p className="lg:text-xl md:text-lg text-base opacity-80">
+            I am a Full Stack Next.js Developer based in India, dedicated to
+            creating high-performance, SEO-optimized web applications. With a
+            proven track record of success, I take pride in my ability to
+            harness the latest features of Next.js to deliver innovative
+            solutions that not only meet but often exceed client expectations.
+            
+          </p>
+          <p className="lg:text-xl md:text-lg text-base opacity-80">
+            My passion for technology drives me to stay ahead of industry
+            trends, ensuring that I provide exceptional results tailored to each
+            project. I thrive on challenges and enjoy collaborating with clients
+            to bring their visions to life through effective and efficient web
+            development. Let&apos;s connect and explore how I can help elevate your
+            digital presence!
           </p>
         </motion.div>
       </motion.div>

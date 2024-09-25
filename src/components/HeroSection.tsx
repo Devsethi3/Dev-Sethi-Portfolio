@@ -27,7 +27,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
 
       {/* Content Section */}
-      <div className="flex container mx-auto px-4 min-h-screen w-full flex-col items-start pt-24 justify-end relative z-10 pb-24">
+      <div className="flex container mx-auto px-4 min-h-screen w-full flex-col items-start lg:pt-24 pt-16 justify-end relative z-10 lg:pb-24 pb-16">
         <motion.h2
           className="text-3xl relative sm:text-3xl md:text-6xl font-extrabold text-white mb-2"
           initial={{ opacity: 0, y: 20 }}

@@ -22,7 +22,7 @@ const ImageBento: React.FC = () => {
   ];
 
   const images2 = [
-    "/portfolio-bg.jpg",
+    "/novis-showcase.png",
     "/Synkron.png",
     "/showcase-grid-3.png",
     "/showcase-grid-2.png",

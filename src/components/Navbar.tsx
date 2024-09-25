@@ -127,7 +127,7 @@ const Navbar = () => {
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <motion.div
-          className="container border border-[#ffffff06] bg-[#ffffff08] flex justify-between items-center backdrop-blur-xl py-4 rounded-lg shadow-lg"
+          className="container border border-[#ffffff10] bg-[#ffffff14] flex justify-between items-center backdrop-blur-xl py-4 rounded-lg shadow-lg"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
