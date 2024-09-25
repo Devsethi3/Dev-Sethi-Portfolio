@@ -141,7 +141,7 @@ const AboutPage: React.FC = () => {
             <ReactTyped
               strings={["Coding", "Designing", "Developing", "Templating"]}
               typeSpeed={100}
-              backSpeed={80} // Speed
+              backSpeed={80} //
               loop // Infinite loop
               loopCount={Infinity} // Set loop count to infinite
               showCursor // Show blinking cursor
