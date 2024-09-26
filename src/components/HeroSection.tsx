@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 import Navbar from "./Navbar";
@@ -9,7 +9,17 @@ import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
   const [show, setShow] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -37,62 +47,65 @@ const HeroSection = () => {
           Hello There, I&apos;m
           <span className="absolute lg:w-[30%] w-[25%] lg:h-1 h-0.5 bg-white transform top-[50%] left-[120%] -translate-x-1/2 -translate-y-1/2 sm:max-w-[200px] md:max-w-[250px] lg:max-w-[300px]"></span>
         </motion.h2>
-        <div className="hidden lg:block">
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-2 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            Dev Prasad Sethi
-          </motion.h1>
-          <motion.h3
-            className="text-3xl sm:text-3xl md:text-6xl font-extrabold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            onAnimationComplete={() => setShow(true)} // Set show to true after the animation completes
-          >
-            <RoughNotationGroup show={show}>
-              <span>an</span>
-              &nbsp;
-              <RoughNotation type="box" show={show}>
-                Developer
-              </RoughNotation>
-              &nbsp; & &nbsp;
-              <RoughNotation type="box" show={show}>
-                Designer
-              </RoughNotation>
-              &nbsp;
-              <span>from India</span>
-            </RoughNotationGroup>
-          </motion.h3>
-        </div>
-        <div className="lg:hidden block">
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-2 leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            Dev Sethi
-          </motion.h1>
-          <motion.h3
-            className="text-3xl sm:text-3xl md:text-6xl font-extrabold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            an Web Developer & Designer from India
-          </motion.h3>
-        </div>
+        {!isMobile ? (
+          <>
+            <motion.h1
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-2 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              Dev Prasad Sethi
+            </motion.h1>
+            <motion.h3
+              className="text-3xl sm:text-3xl md:text-6xl font-extrabold text-white mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              onAnimationComplete={() => setShow(true)}
+            >
+              <RoughNotationGroup show={show}>
+                <span>an</span>
+                &nbsp;
+                <RoughNotation type="box" show={show}>
+                  Developer
+                </RoughNotation>
+                &nbsp; & &nbsp;
+                <RoughNotation type="box" show={show}>
+                  Designer
+                </RoughNotation>
+                &nbsp;
+                <span>from India</span>
+              </RoughNotationGroup>
+            </motion.h3>
+          </>
+        ) : (
+          <>
+            <motion.h1
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-2 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              Dev Sethi
+            </motion.h1>
+            <motion.h3
+              className="text-3xl sm:text-3xl md:text-6xl font-extrabold text-white mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              an Web Developer & Designer from India
+            </motion.h3>
+          </>
+        )}
         <motion.p
           className="text-base sm:text-xl font-medium text-white mb-8 max-w-2xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          I am a versatile designer & developer based in the India, dedicated to
+          I am a versatile designer & developer based in India, dedicated to
           crafting innovative and visually appealing experiences.
         </motion.p>
         <motion.div
@@ -108,7 +121,7 @@ const HeroSection = () => {
             Contact Me
             <MdArrowOutward
               size={23}
-              className="transform transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" // Moves the icon upwards when hovering over the button
+              className="transform transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             />
           </button>
           <button
@@ -118,7 +131,7 @@ const HeroSection = () => {
             Browse Portfolio
             <MdArrowOutward
               size={23}
-              className="transform transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" // Moves the icon upwards when hovering over the button
+              className="transform transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             />
           </button>
         </motion.div>

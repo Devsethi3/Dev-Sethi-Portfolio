@@ -125,7 +125,7 @@ const ContactPage: FC = () => {
 
       <div className="w-full container grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         {/* Left Column - Profile Card */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col lg:gap-10 gap-4">
           <motion.div
             className="p-8 rounded-lg border border-[#ffffff10] bg-[#ffffff14] backdrop-blur-lg shadow-lg flex flex-col justify-between space-y-8"
             initial={{ opacity: 0, y: 50 }}
