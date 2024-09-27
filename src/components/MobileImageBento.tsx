@@ -30,7 +30,7 @@ const MobileImageBento: React.FC = () => {
     "/Synkron.png",
   ];
 
-  // type to MotionValue<number>
+  // type MotionValue<number>
   const ImageRow: React.FC<{
     xOffset: MotionValue<number>;
     images: string[];
