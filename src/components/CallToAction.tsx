@@ -12,7 +12,7 @@ const CallToAction = () => {
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-40 relative rounded-xl mt-20 overflow-hidden">
         {/* Mesh Gradient Background */}
         <div className="absolute inset-0 bg-[url(/call-to-action.svg)] bg-cover bg-center"></div>
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-rose-500 via-pink-600 to-rose-500 opacity-80 blur-2xl"></div> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-rose-500 via-pink-600 to-rose-500 opacity-80"></div> */}
 
         {/* Content */}
         <div className="relative z-10">
