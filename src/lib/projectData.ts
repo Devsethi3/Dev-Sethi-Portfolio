@@ -40,7 +40,7 @@ export const projects: Project[] = [
     images: [
       "/Synkron.png",
       "/synkron-showcase.png",
-      "/Synkron-showcase-2.png",
+      "/synkron-showcase-2.png",
       "/showcase-2.webp",
     ],
     github: "https://github.com/Devsethi3/Synkron",

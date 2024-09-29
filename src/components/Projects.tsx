@@ -146,9 +146,9 @@ const Projects: React.FC = () => {
             ref={descriptionRef}
             className="text-base lg:text-left text-center md:text-lg lg:text-xl max-w-xl lg:my-8 my-5"
           >
-            Our teams are purpose-built around our client&apos;s unique needs at
-            every stage of the engagement. Our goal is to create work that
-            resonates with your audience and grows your business.
+            Step into my digital playground and witness the power of creativity
+            showcasing a range of web projects that highlights my expertise in building
+            scalable and optimized projects.
           </p>
           <motion.button
             onClick={() => router.push("/work")}
