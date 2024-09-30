@@ -137,7 +137,7 @@ const Projects: React.FC = () => {
             ref={headingRef}
             className="text-4xl lg:text-left text-center lg:text-5xl font-extrabold mb-4"
           >
-            Explore our{" "}
+            Explore my{" "}
             <RoughNotation type="highlight" show={true} color="#E53E6D">
               Projects
             </RoughNotation>
