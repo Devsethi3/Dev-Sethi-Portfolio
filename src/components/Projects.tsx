@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
         start: "top bottom",
         end: "bottom top",
         toggleActions: "play none none reverse",
-        markers: false, // Set to true for debugging
+        markers: false, // Set to true for
       };
 
       // Animate heading
