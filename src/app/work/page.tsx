@@ -9,7 +9,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { projects } from "@/lib/projectData";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { useGSAP } from "@gsap/react";
 import FeaturedPackage from "@/components/FeaturedPackage";
 import Link from "next/link";
 

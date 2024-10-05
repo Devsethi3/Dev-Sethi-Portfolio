@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Dev Prasad Sethi Portfolio",
     images: [
       {
-        url: "/profile.jpg", 
+        url: "/favicon.svg", 
         width: 1200,
         height: 630,
         alt: "Dev Prasad Sethi Portfolio",

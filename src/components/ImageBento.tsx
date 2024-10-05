@@ -17,7 +17,7 @@ const ImageBento: React.FC = () => {
     "/light-theme.png",
     "/b1.svg",
     "/Preview.png",
-    "/demo-project.webp",
+    "/Synkron.png",
     "/showcase-grid-2.png",
   ];
 
