@@ -90,7 +90,7 @@ const FeaturedPackage: React.FC = () => {
           );
       }, sectionRef);
 
-      // Refresh ScrollTrigger after a short delay to 
+      // Refresh ScrollTrigger after a short delay
       const refreshTimeout = setTimeout(() => {
         ScrollTrigger.refresh();
       }, 100);
