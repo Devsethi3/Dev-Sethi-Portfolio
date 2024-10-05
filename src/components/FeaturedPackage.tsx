@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-// import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -97,7 +96,7 @@ const FeaturedPackage: React.FC = () => {
       }, 100);
 
       return () => {
-        ctx.revert(); // Clean up GSAP animations
+        ctx.revert(); // Clean up
         clearTimeout(refreshTimeout);
       };
     }
